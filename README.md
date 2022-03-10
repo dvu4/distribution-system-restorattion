@@ -55,10 +55,12 @@ The project helps in modernizing Distribution System Restoration to achieve Grid
 
 ```
 
-<img src=images/img1  height="508" width="960">
-<img src=images/img2  height="508" width="960">
-<img src=images/img3  height="508" width="960">
-<img src=images/img4  height="508" width="960">
+![alt text](https://github.com/dvu4/distribution-system-restorattion/blob/999ad7e03586fd64eb1860e1f40dc5a25c89d0ff/images/img1.jpg)
+![alt text](https://github.com/dvu4/distribution-system-restorattion/blob/999ad7e03586fd64eb1860e1f40dc5a25c89d0ff/images/img2.jpg)
+![alt text](https://github.com/dvu4/distribution-system-restorattion/blob/999ad7e03586fd64eb1860e1f40dc5a25c89d0ff/images/img3.jpg)
+![alt text](https://github.com/dvu4/distribution-system-restorattion/blob/999ad7e03586fd64eb1860e1f40dc5a25c89d0ff/images/img4.jpg)
+
+
 ## Requirements
   - Python 3.6
   - PyQt5 UI
