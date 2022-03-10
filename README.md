@@ -4,6 +4,7 @@ The project helps in modernizing Distribution System Restoration to achieve Grid
 
 ![alt text](https://github.com/dvu4/distribution-system-restorattion/blob/a07885d9d1b2dcf0f48c7dd7637080b375842a65/images/logo-grid-mod-lc.png)
 
+
 ### Folder Structure 
 ```
 .
@@ -54,7 +55,10 @@ The project helps in modernizing Distribution System Restoration to achieve Grid
 
 ```
 
-
+<img src=images/img1  height="508" width="960">
+<img src=images/img2  height="508" width="960">
+<img src=images/img3  height="508" width="960">
+<img src=images/img4  height="508" width="960">
 ## Requirements
   - Python 3.6
   - PyQt5 UI
