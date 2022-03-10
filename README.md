@@ -1,5 +1,6 @@
 # Distribution System Restorattion
 
+The project helps in modernizing Distribution System Restoration to achieve Grid Resiliency against Extreme Weather Events and visualizing the Electric Grid and Weather data
 
 ![alt text](https://github.com/dvu4/distribution-system-restorattion/blob/a07885d9d1b2dcf0f48c7dd7637080b375842a65/images/logo-grid-mod-lc.png)
 ### Folder Structure 
@@ -49,3 +50,15 @@
 └──plot_dss_module						# Plotting the the topology for DSS system
 └──data_import_module.py 				# Combining all setting files (node, capacitor, ...) into system file (.dat).
 └──README.md
+
+
+
+
+## Requirements
+  - Python 3.6
+  - PyQt5 UI
+  - Folium
+  - Networkx
+  - Numpy
+  - Pyproj
+
