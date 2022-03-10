@@ -1,5 +1,7 @@
 # dist-restoration
 
+
+![alt text](https://github.com/dvu4/distribution-system-restorattion/blob/a07885d9d1b2dcf0f48c7dd7637080b375842a65/images/logo-grid-mod-lc.png)
 ### Folder Structure 
 ```
 .
