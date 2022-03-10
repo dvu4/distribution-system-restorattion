@@ -1,0 +1,931 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1310</width>
+    <height>722</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>DSR</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextBrowser" name="log_box">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>50</y>
+      <width>201</width>
+      <height>421</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>51</x>
+      <y>57</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Base Voltage (kV)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>51</x>
+      <y>89</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Base Power (kVA)</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="clpu_enable">
+    <property name="geometry">
+     <rect>
+      <x>295</x>
+      <y>54</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Enable CLPU Load Model</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="ess_enable">
+    <property name="geometry">
+     <rect>
+      <x>295</x>
+      <y>82</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Enable Energy Storage Control</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="vg_enable">
+    <property name="geometry">
+     <rect>
+      <x>295</x>
+      <y>112</y>
+      <width>221</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Enable Voltage Regulator Control</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="cb_enable">
+    <property name="geometry">
+     <rect>
+      <x>295</x>
+      <y>141</y>
+      <width>221</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Enable Capacitor Bank Control</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>49</x>
+      <y>220</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Horizon (steps)</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>49</x>
+      <y>252</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Control Steps</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="voltage_limit">
+    <property name="geometry">
+     <rect>
+      <x>293</x>
+      <y>242</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Voltage Limit Constraints</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>49</x>
+      <y>282</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Total Steps</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="power_flow">
+    <property name="geometry">
+     <rect>
+      <x>293</x>
+      <y>217</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Power Flow Constraints</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="line_capacity">
+    <property name="geometry">
+     <rect>
+      <x>293</x>
+      <y>268</y>
+      <width>221</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Line Capacity Constraints</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="gen_capacity">
+    <property name="geometry">
+     <rect>
+      <x>293</x>
+      <y>294</y>
+      <width>221</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Generator Capacity Constraints</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>49</x>
+      <y>312</y>
+      <width>141</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Step Length (minute)</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>27</y>
+      <width>511</width>
+      <height>151</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string notr="true"/>
+    </property>
+    <property name="statusTip">
+     <string notr="true"/>
+    </property>
+    <property name="title">
+     <string>System Information</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <widget class="QDoubleSpinBox" name="Vbase">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>30</y>
+       <width>81</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <double>1000.000000000000000</double>
+     </property>
+     <property name="value">
+      <double>4.160000000000000</double>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="Sbase">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>60</y>
+       <width>81</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <double>1000.000000000000000</double>
+     </property>
+     <property name="value">
+      <double>1.000000000000000</double>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>190</y>
+      <width>511</width>
+      <height>292</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Problem Formulation</string>
+    </property>
+    <widget class="QCheckBox" name="gen_reserve">
+     <property name="geometry">
+      <rect>
+       <x>263</x>
+       <y>131</y>
+       <width>221</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Generator Reserve Constraints</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gen_ramp">
+     <property name="geometry">
+      <rect>
+       <x>263</x>
+       <y>157</y>
+       <width>221</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Generator Ramp Constraints</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gen_stepload">
+     <property name="geometry">
+      <rect>
+       <x>263</x>
+       <y>183</y>
+       <width>221</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Generator Stepload Constraints</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="gen_unbalance">
+     <property name="geometry">
+      <rect>
+       <x>263</x>
+       <y>209</y>
+       <width>221</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Generator Unbalance Constraints</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="non_shed">
+     <property name="geometry">
+      <rect>
+       <x>263</x>
+       <y>235</y>
+       <width>221</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Non-shed Constraints</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="topology">
+     <property name="geometry">
+      <rect>
+       <x>263</x>
+       <y>260</y>
+       <width>231</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Sequence and Topology Constraints</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="horizon_step">
+     <property name="geometry">
+      <rect>
+       <x>161</x>
+       <y>30</y>
+       <width>81</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>20</number>
+     </property>
+     <property name="value">
+      <number>5</number>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="control_step">
+     <property name="geometry">
+      <rect>
+       <x>161</x>
+       <y>60</y>
+       <width>81</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>20</number>
+     </property>
+     <property name="value">
+      <number>4</number>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="total_step">
+     <property name="geometry">
+      <rect>
+       <x>161</x>
+       <y>90</y>
+       <width>81</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <number>20</number>
+     </property>
+     <property name="value">
+      <number>10</number>
+     </property>
+    </widget>
+    <widget class="QDoubleSpinBox" name="length_step">
+     <property name="geometry">
+      <rect>
+       <x>161</x>
+       <y>120</y>
+       <width>81</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="maximum">
+      <double>20.000000000000000</double>
+     </property>
+     <property name="singleStep">
+      <double>1.000000000000000</double>
+     </property>
+     <property name="value">
+      <double>1.000000000000000</double>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>27</y>
+      <width>221</width>
+      <height>455</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Log</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="diagram_label">
+    <property name="geometry">
+     <rect>
+      <x>820</x>
+      <y>60</y>
+      <width>451</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>24</y>
+      <width>471</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Diagram</string>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="solve_btn">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>510</y>
+      <width>171</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Solve</string>
+    </property>
+   </widget>
+   <widget class="QScrollBar" name="horizontalScrollBar">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>490</y>
+      <width>471</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>471</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="minimumSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>550</y>
+      <width>48</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="maximumSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>580</y>
+      <width>48</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="valueSpinBox">
+    <property name="geometry">
+     <rect>
+      <x>930</x>
+      <y>610</y>
+      <width>48</width>
+      <height>24</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>550</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Minimum value :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>580</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Maximum value :</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>610</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Current value :</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="horizontalSlider">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>520</y>
+      <width>471</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="animation_btn">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>510</y>
+      <width>171</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Plot animation</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="animation_btn_2">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>560</y>
+      <width>171</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Play </string>
+    </property>
+   </widget>
+   <zorder>groupBox_3</zorder>
+   <zorder>groupBox_2</zorder>
+   <zorder>groupBox</zorder>
+   <zorder>log_box</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>clpu_enable</zorder>
+   <zorder>ess_enable</zorder>
+   <zorder>vg_enable</zorder>
+   <zorder>cb_enable</zorder>
+   <zorder>label_4</zorder>
+   <zorder>label_5</zorder>
+   <zorder>voltage_limit</zorder>
+   <zorder>label_6</zorder>
+   <zorder>power_flow</zorder>
+   <zorder>line_capacity</zorder>
+   <zorder>gen_capacity</zorder>
+   <zorder>label_7</zorder>
+   <zorder>diagram_label</zorder>
+   <zorder>groupBox_4</zorder>
+   <zorder>solve_btn</zorder>
+   <zorder>horizontalScrollBar</zorder>
+   <zorder>minimumSpinBox</zorder>
+   <zorder>maximumSpinBox</zorder>
+   <zorder>valueSpinBox</zorder>
+   <zorder>label_9</zorder>
+   <zorder>label_10</zorder>
+   <zorder>label_11</zorder>
+   <zorder>horizontalSlider</zorder>
+   <zorder>animation_btn</zorder>
+   <zorder>animation_btn_2</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="minimumSize">
+    <size>
+     <width>30</width>
+     <height>30</height>
+    </size>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="action_Open"/>
+   <addaction name="separator"/>
+   <addaction name="actionSystem_Diagram"/>
+   <addaction name="actionLine_Current"/>
+   <addaction name="actionNodal_Voltage"/>
+   <addaction name="actionLoad_Profile"/>
+   <addaction name="separator"/>
+   <addaction name="actionSolve_Sequence"/>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1310</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="action_Open"/>
+    <addaction name="separator"/>
+    <addaction name="action_Exit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionTo_Be_Completed"/>
+   </widget>
+   <widget class="QMenu" name="menuVisualize">
+    <property name="title">
+     <string>Visualize</string>
+    </property>
+    <addaction name="actionSystem_Diagram"/>
+    <addaction name="actionLoad_Profile"/>
+    <addaction name="actionNodal_Voltage"/>
+    <addaction name="actionLine_Current"/>
+   </widget>
+   <widget class="QMenu" name="menuSetup">
+    <property name="title">
+     <string>Setup</string>
+    </property>
+    <addaction name="actionRolling_Horizon_Setup"/>
+    <addaction name="actionSystem_Setup"/>
+    <addaction name="separator"/>
+    <addaction name="actionReset_to_Default_Setups"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionHelp"/>
+    <addaction name="actionContact"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <widget class="QMenu" name="menuSolve">
+    <property name="title">
+     <string>Solve</string>
+    </property>
+    <addaction name="actionSolve_Sequence"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuSetup"/>
+   <addaction name="menuSolve"/>
+   <addaction name="menuVisualize"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionRolling_Horizon_Parameters">
+   <property name="text">
+    <string>Rolling Horizon Parameters</string>
+   </property>
+  </action>
+  <action name="actionSystem_Parameters">
+   <property name="text">
+    <string>System Parameters</string>
+   </property>
+  </action>
+  <action name="actionSolver_Selection">
+   <property name="text">
+    <string>Solver Selection</string>
+   </property>
+  </action>
+  <action name="actionRolling_Horizon_Setup">
+   <property name="text">
+    <string>Rolling Horizon Setup</string>
+   </property>
+  </action>
+  <action name="actionSystem_Setup">
+   <property name="text">
+    <string>System Setup</string>
+   </property>
+  </action>
+  <action name="actionSolver_Setup">
+   <property name="text">
+    <string>Solver Setup</string>
+   </property>
+  </action>
+  <action name="actionSolve">
+   <property name="text">
+    <string>Solve</string>
+   </property>
+  </action>
+  <action name="actionShow_Solution_in_Excel">
+   <property name="text">
+    <string>Show Solution in Excel</string>
+   </property>
+  </action>
+  <action name="actionShow_Single_Line_Diagrams">
+   <property name="text">
+    <string>Show Single Line Diagrams</string>
+   </property>
+  </action>
+  <action name="actionReset_to_Default_Setups">
+   <property name="text">
+    <string>Reset to Default Setups</string>
+   </property>
+  </action>
+  <action name="actionNodal_Voltage">
+   <property name="text">
+    <string>Nodal Voltage</string>
+   </property>
+  </action>
+  <action name="actionSystem_Diagram">
+   <property name="text">
+    <string>System Diagram</string>
+   </property>
+  </action>
+  <action name="actionLoad_Profile">
+   <property name="text">
+    <string>Load Profile</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Tutorial</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionContact">
+   <property name="text">
+    <string>Contact</string>
+   </property>
+  </action>
+  <action name="actionPower_Flow">
+   <property name="text">
+    <string>Power Flow</string>
+   </property>
+  </action>
+  <action name="actionService_Restoration">
+   <property name="text">
+    <string>Service Restoration</string>
+   </property>
+  </action>
+  <action name="actionCrew_Dispatch">
+   <property name="text">
+    <string>Crew Dispatch</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionExit_2">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionImport">
+   <property name="text">
+    <string>Open .dat</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSave_As">
+   <property name="text">
+    <string>Save As</string>
+   </property>
+  </action>
+  <action name="actionImport_2">
+   <property name="text">
+    <string>Import</string>
+   </property>
+  </action>
+  <action name="action_Open">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="action_Exit">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionTo_Be_Completed">
+   <property name="text">
+    <string>To Be Completed</string>
+   </property>
+  </action>
+  <action name="actionLine_Current">
+   <property name="text">
+    <string>Line Current</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionSolve_Sequence">
+   <property name="text">
+    <string>Solve Sequence</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
