@@ -1,5 +1,13 @@
 # -*- coding: utf-8 -*-
 
+
+__author__ = "Duc Vu"
+__copyright__ = "Copyright 2017, " \
+                "The GMLC Project: A Closed-Loop Distribution System Restoration Tool" \
+                " for Natural Disaster Recovery"
+__maintainer__ = "Duc Vu"
+__email__ = "ducvuchicago@gmail.com"
+
 # Form implementation generated from reading ui file 'MainWindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.6
