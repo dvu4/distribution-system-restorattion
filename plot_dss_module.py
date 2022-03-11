@@ -1,3 +1,12 @@
+
+__author__ = "Duc Vu"
+__copyright__ = "Copyright 2017, " \
+                "The GMLC Project: A Closed-Loop Distribution System Restoration Tool" \
+                " for Natural Disaster Recovery"
+__maintainer__ = "Duc Vu"
+__email__ = "ducvuchicago@gmail.com"
+
+
 import os
 import pickle
 import networkx as nx
